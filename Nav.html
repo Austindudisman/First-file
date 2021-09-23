@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+       
+       body{
+           margin: 0%;
+       }
+       .topnav a{
+            text-decoration: none;
+            font-size: 27px;
+            font-family: calibri;
+            color: cornsilk;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            z-index: 2;
+            width: 300px;
+            position: absolute;
+            text-align: center;
+            border-radius: 15px;
+            left: -220px;
+            transition: 0.8s;
+            transform: rotateZ(6deg);
+        }
+        .topnav a:hover{
+            left: -75px;
+            transform: rotateZ(0deg);
+        }
+        #page-1{
+            background-color: darkgreen;
+            top: 200px;
+        }
+        #page-2{
+            background-color: darkmagenta;
+            top: 265px;
+        }
+        #page-3{
+            background-color: darkolivegreen;
+            top: 330px;
+        }
+        #page-4{
+            background-color: darkslategray;
+            top: 395px;
+        }
+        #page-5{
+            background-color: darkred;
+            top: 460px;
+        }
+        #page-6{
+            background-color: purple;
+            top: 525px;
+        }
+       
+        .container-1 div{
+            height: 800px;
+            width: 100%;
+            font-size: 60px;
+            font-family: calibri;
+            text-align: center;
+            position: absolute;
+            z-index: 0;
+        }
+        
+        #home{
+            background-color: orange;
+        }
+        #dashboard{
+            background-color: hotpink;
+        }
+        #about{
+            background-color: yellowgreen;
+        }
+        #pricing{
+            background-color: violet;
+        }
+        #resources{
+            background-color: tomato;
+        }
+        #contact{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+   <!-- 
+       1. Home
+       2. Dashboard
+       3. About
+       4. Pricing
+       5. Resources
+       6. Contact
+    -->
+    <div class="topnav">
+        <a href="#" id="page-1" onclick="showContentPage('home','dashborad','about','prices','resources','contact')"> Home </a>
+        <a href="#" id="page-2" onclick="showContentPage('dashboard','about','prices','resources','contact','home')"> Dashboard </a>
+        <a href="#" id="page-3" onclick="showContentPage('about','prices','resources','contact','home','dashboard')"> About </a>
+        <a href="#" id="page-4" onclick="showContentPage('pricing','resources','contact','home','dashboard','about')"> Pricing </a>
+        <a href="#" id="page-5" onclick="showContentPage('resources','contact','home','dashboard','about','pricing')"> Resources </a>
+        <a href="#" id="page-6" onclick="showContentPage('contact','home','dashboard','about','pricing','resources')"> Contact </a>
+    </div>
+    <div class="container-1">
+        <div id="home">HOME</div>
+        <div id="dashboard">DASHBOARD</div>
+        <div id="about">ABOUT</div>
+        <div id="pricing">PRICING</div>
+        <div id="resources">RESOURCES</div>
+        <div id="contact">CONTACT</div>
+
+
